@@ -1,0 +1,56 @@
+tap:
+    upload-interval: 10
+    regex: .*
+    gui-port: 8899
+    proxy-host: 127.0.0.1
+    namespaces: []
+    analysis: false
+    all-namespaces: false
+    regex-masking: []
+    ignored-user-agents: []
+    no-redact: false
+    max-entries-db-size: 200MB
+    insertion-filter: ""
+    dry-run: false
+    workspace: ""
+    traffic-validation-file: ""
+    contract: ""
+    ask-upload-confirmation: true
+    api-server-resources:
+        cpu-limit: 750m
+        memory-limit: 1Gi
+        cpu-requests: 50m
+        memory-requests: 50Mi
+    tapper-resources:
+        cpu-limit: 750m
+        memory-limit: 1Gi
+        cpu-requests: 50m
+        memory-requests: 50Mi
+    service-mesh: false
+    tls: false
+check:
+    pre-tap: false
+    pre-install: false
+    image-pull: false
+install:
+    template-url: https://storage.googleapis.com/static.up9.io/mizu/helm-template
+    template-name: helm-template.yaml
+version:
+    debug: false
+view:
+    gui-port: 8899
+logs:
+    file: ""
+auth:
+    env-name: up9.app
+    token: ""
+image-pull-policy: IfNotPresent
+mizu-resources-namespace: mizu
+telemetry: true
+dump-logs: false
+kube-config-path: ""
+kube-context: ""
+headless: false
+service-map: true
+oas: true
+elastic: {}
